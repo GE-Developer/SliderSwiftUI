@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		4C2967A32A36558700303ADF /* SliderSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2967A22A36558700303ADF /* SliderSwiftUIApp.swift */; };
-		4C2967A52A36558700303ADF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2967A42A36558700303ADF /* ContentView.swift */; };
+		4C2967A52A36558700303ADF /* RGBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2967A42A36558700303ADF /* RGBView.swift */; };
 		4C2967A72A36558900303ADF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C2967A62A36558900303ADF /* Assets.xcassets */; };
 		4C2967AA2A36558900303ADF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C2967A92A36558900303ADF /* Preview Assets.xcassets */; };
+		4C2967B12A365AC100303ADF /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2967B02A365AC100303ADF /* ColorView.swift */; };
+		4C2967B32A3660E900303ADF /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2967B22A3660E900303ADF /* SliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C29679F2A36558700303ADF /* SliderSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SliderSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2967A22A36558700303ADF /* SliderSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderSwiftUIApp.swift; sourceTree = "<group>"; };
-		4C2967A42A36558700303ADF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4C2967A42A36558700303ADF /* RGBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBView.swift; sourceTree = "<group>"; };
 		4C2967A62A36558900303ADF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C2967A92A36558900303ADF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4C2967B02A365AC100303ADF /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		4C2967B22A3660E900303ADF /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +55,11 @@
 		4C2967A12A36558700303ADF /* SliderSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				4C2967A22A36558700303ADF /* SliderSwiftUIApp.swift */,
-				4C2967A42A36558700303ADF /* ContentView.swift */,
-				4C2967A62A36558900303ADF /* Assets.xcassets */,
+				4C48E4B22A3671FD00E8A4BC /* Application */,
+				4C2967A42A36558700303ADF /* RGBView.swift */,
+				4C2967B02A365AC100303ADF /* ColorView.swift */,
+				4C2967B22A3660E900303ADF /* SliderView.swift */,
+				4C48E4B32A36720B00E8A4BC /* Sources */,
 				4C2967A82A36558900303ADF /* Preview Content */,
 			);
 			path = SliderSwiftUI;
@@ -65,6 +71,22 @@
 				4C2967A92A36558900303ADF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4C48E4B22A3671FD00E8A4BC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4C2967A22A36558700303ADF /* SliderSwiftUIApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		4C48E4B32A36720B00E8A4BC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				4C2967A62A36558900303ADF /* Assets.xcassets */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C2967A52A36558700303ADF /* ContentView.swift in Sources */,
+				4C2967B12A365AC100303ADF /* ColorView.swift in Sources */,
+				4C2967B32A3660E900303ADF /* SliderView.swift in Sources */,
+				4C2967A52A36558700303ADF /* RGBView.swift in Sources */,
 				4C2967A32A36558700303ADF /* SliderSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

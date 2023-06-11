@@ -11,7 +11,7 @@ import SwiftUI
 struct SliderSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RGBView()
         }
     }
 }
