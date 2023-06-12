@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct RGBView: View {
-    @State private var redValue = Double.random(in: 0...255)
-    @State private var greenValue = Double.random(in: 0...255)
-    @State private var blueValue = Double.random(in: 0...255)
+    @State private var redValue = round(.random(in: 0...255))
+    @State private var greenValue = round(.random(in: 0...255))
+    @State private var blueValue = round(.random(in: 0...255))
     
     var body: some View {
         ZStack {
