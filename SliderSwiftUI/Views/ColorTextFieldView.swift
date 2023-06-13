@@ -11,6 +11,8 @@ struct ColorTextFieldView: View {
     @Binding var strValue: String
     @Binding var value: Double
     
+    @State private var showAlert = false
+    
     @FocusState private var focusedField: Bool
     
     var body: some View {
@@ -19,6 +21,8 @@ struct ColorTextFieldView: View {
             .frame(width: 70)
             .textFieldStyle(RoundedBorderTextFieldStyle())
             .keyboardType(.decimalPad)
+            .multilineTextAlignment(.center)
+            .alert("Вы вне диапазона", isPresented: $showAlert, actions: {})
             .onSubmit {
                 setValue()
                 focusedField = false
@@ -28,7 +32,7 @@ struct ColorTextFieldView: View {
                     ToolbarItem(placement: .keyboard) {
                         Button("Done") {
                             setValue()
-                            endEditing()
+                            UIApplication.shared.endEditing()
                         }
                         .frame(width: 50)
                         .padding(.leading, UIScreen.main.bounds.width - 100)
@@ -38,16 +42,18 @@ struct ColorTextFieldView: View {
     }
     
     private func setValue() {
-        value = Double(strValue) ?? 0
-    }
-    
-    private func endEditing() {
-        UIApplication.shared.sendAction(
-            #selector(UIResponder.resignFirstResponder),
-            to: nil,
-            from: nil,
-            for: nil
-        )
+        let currentValue = Double(strValue) ?? 0
+        
+        switch currentValue {
+        case 255...:
+            value = 255
+            showAlert.toggle()
+        case 0..<255:
+            value = currentValue
+        default:
+            value = 0
+            showAlert.toggle()
+        }
     }
 }
 

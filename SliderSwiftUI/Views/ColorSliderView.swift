@@ -17,10 +17,10 @@ struct ColorSliderView: View {
         Slider(value: $value, in: 0...255, step: 1)
             .accentColor(color)
             .shadow(color: color, radius: 10)
+            .animation(.easeInOut, value: value)
             .onChange(of: value) { newValue in
                 strValue = "\(lround(newValue))"
             }
-            .animation(.easeInOut, value: value)
     }
 }
 

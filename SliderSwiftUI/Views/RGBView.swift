@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-// Редактирование значения
-// Алерт
-// Done по нажатию на экран
-
 struct RGBView: View {
     @State private var redValue = Double.random(in: 0...255)
     @State private var greenValue = Double.random(in: 0...255)
