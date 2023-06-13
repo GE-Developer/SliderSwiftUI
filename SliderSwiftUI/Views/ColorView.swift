@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ColorView: View {
-    let redValue: Double
-    let greenValue: Double
-    let blueValue: Double
+    let red: Double
+    let green: Double
+    let blue: Double
     
     var body: some View {
         RoundedRectangle(cornerRadius: 10)
@@ -20,18 +20,15 @@ struct ColorView: View {
                     .stroke(Color.white, lineWidth: 4)
             )
             .foregroundColor(
-                Color(
-                    red: redValue / 255,
-                    green: greenValue / 255,
-                    blue: blueValue / 255
-                )
+                Color(red: red / 255, green: green / 255, blue: blue / 255)
             )
             .shadow(color: .black, radius: 10)
+            .padding(.bottom)
     }
 }
 
 struct ColorView_Previews: PreviewProvider {
     static var previews: some View {
-        ColorView(redValue: 100, greenValue: 100, blueValue: 100)
+        ColorView(red: 100, green: 100, blue: 100)
     }
 }
